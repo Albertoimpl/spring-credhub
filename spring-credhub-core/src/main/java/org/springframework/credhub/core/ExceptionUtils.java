@@ -19,6 +19,8 @@ package org.springframework.credhub.core;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.ClientResponse;
+import reactor.core.publisher.Mono;
 
 public class ExceptionUtils {
 	/**
@@ -31,5 +33,9 @@ public class ExceptionUtils {
 		if (!response.getStatusCode().equals(HttpStatus.OK)) {
 			throw new CredHubException(response.getStatusCode());
 		}
+	}
+
+	public static Mono<Throwable> buildError(ClientResponse response) {
+		return Mono.error(new CredHubException(response.statusCode()));
 	}
 }
