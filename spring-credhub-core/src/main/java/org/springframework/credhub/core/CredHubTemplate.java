@@ -66,7 +66,7 @@ public class CredHubTemplate implements CredHubOperations {
 		Assert.notNull(properties, "properties must not be null");
 		Assert.notNull(clientHttpRequestFactory, "clientHttpRequestFactory must not be null");
 
-		this.restTemplate = CredHubClientFactory.createRestTemplate(properties,
+		this.restTemplate = CredHubRestTemplateFactory.createRestTemplate(properties,
 				clientHttpRequestFactory);
 	}
 
@@ -86,7 +86,7 @@ public class CredHubTemplate implements CredHubOperations {
 		Assert.notNull(clientHttpRequestFactory, "clientHttpRequestFactory must not be null");
 		Assert.notNull(clientRegistrationRepository, "clientRegistrationRepository must not be null");
 
-		this.restTemplate = CredHubClientFactory.createRestTemplate(properties,
+		this.restTemplate = CredHubRestTemplateFactory.createRestTemplate(properties,
 				clientHttpRequestFactory, clientRegistrationRepository);
 	}
 

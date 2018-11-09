@@ -51,7 +51,7 @@ import org.springframework.web.util.DefaultUriBuilderFactory;
  * @author Scott Frederick
  * @author Daniel Lavoie
  */
-class CredHubClientFactory {
+class CredHubRestTemplateFactory {
 
 	private static OAuth2AccessTokenResponse tokenResponse;
 

@@ -40,7 +40,7 @@ import static org.springframework.security.oauth2.client.web.reactive.function.c
  * @author Mark Paluch
  * @author Scott Frederick
  */
-class ReactiveCredHubClientFactory {
+class CredHubWebClientFactory {
 	/**
 	 * Create a {@link WebClient} configured for communication with a CredHub server.
 	 *

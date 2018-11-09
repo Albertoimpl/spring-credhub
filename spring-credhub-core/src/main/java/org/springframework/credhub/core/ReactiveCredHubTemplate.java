@@ -71,7 +71,7 @@ public class ReactiveCredHubTemplate implements ReactiveCredHubOperations {
 		Assert.notNull(credHubProperties, "credHubProperties must not be null");
 		Assert.notNull(clientHttpConnector, "clientHttpConnector must not be null");
 
-		this.webClient = ReactiveCredHubClientFactory.createWebClient(credHubProperties, clientHttpConnector);
+		this.webClient = CredHubWebClientFactory.createWebClient(credHubProperties, clientHttpConnector);
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class ReactiveCredHubTemplate implements ReactiveCredHubOperations {
 		Assert.notNull(clientRegistrationRepository, "clientRegistrationRepository must not be null");
 		Assert.notNull(authorizedClientRepository, "authorizedClientRepository must not be null");
 
-		this.webClient = ReactiveCredHubClientFactory.createWebClient(credHubProperties, clientHttpConnector,
+		this.webClient = CredHubWebClientFactory.createWebClient(credHubProperties, clientHttpConnector,
 				clientRegistrationRepository, authorizedClientRepository);
 	}
 

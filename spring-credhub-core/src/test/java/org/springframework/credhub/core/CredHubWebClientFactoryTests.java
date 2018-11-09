@@ -28,7 +28,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
-public class ReactiveCredHubClientFactoryTests {
+public class CredHubWebClientFactoryTests {
 	@Mock
 	private ClientHttpConnector clientHttpConnector;
 
@@ -40,7 +40,7 @@ public class ReactiveCredHubClientFactoryTests {
 
 	@Test
 	public void webClientIsCreated() {
-		WebClient webClient = ReactiveCredHubClientFactory
+		WebClient webClient = CredHubWebClientFactory
 				.createWebClient(new CredHubProperties(), clientHttpConnector,
 						clientRegistrationRepository, authorizedClientRepository);
 

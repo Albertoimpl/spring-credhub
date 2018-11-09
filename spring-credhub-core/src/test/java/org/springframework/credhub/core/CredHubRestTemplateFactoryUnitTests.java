@@ -29,7 +29,7 @@ import org.springframework.web.client.RestTemplate;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CredHubClientFactoryUnitTests {
+public class CredHubRestTemplateFactoryUnitTests {
 	@Mock
 	private ClientHttpRequestFactory clientHttpRequestFactory;
 
@@ -37,7 +37,7 @@ public class CredHubClientFactoryUnitTests {
 	public void restTemplateIsCreated() {
 		CredHubProperties properties = new CredHubProperties();
 		properties.setUrl("https://credhub.cf.example.com:8844");
-		RestTemplate restTemplate = CredHubClientFactory
+		RestTemplate restTemplate = CredHubRestTemplateFactory
 				.createRestTemplate(properties, clientHttpRequestFactory);
 
 		assertThat(restTemplate).isNotNull();
