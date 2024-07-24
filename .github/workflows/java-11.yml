@@ -5,9 +5,9 @@ name: Java 11
 
 on:
   push:
-    branches: [ 2.3.*, 2.2.* ]
+    branches: [ 2.3.* ]
   pull_request:
-    branches: [ 2.3.*, 2.2.* ]
+    branches: [ 2.3.* ]
 
 jobs:
   build:
